@@ -1,0 +1,1697 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>www.hlbdy13.com - 高清影视资源聚合与条目速览</title>
+<meta name="description" content="www.hlbdy13.com 汇聚科幻、悬疑、剧情、动作等高清影视条目，提供豆瓣高分作品速览、2026年新片动态、深度解析与用户评论，适合片荒时快速筛选靠谱片单。">
+<meta name="keywords" content="www.hlbdy13.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231a1a2e'/%3E%3Cpath d='M24 32h44a10 10 0 0 1 10 10v26a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10V42a10 10 0 0 1 10-10z' fill='none' stroke='%23e94560' stroke-width='6'/%3E%3Cpath d='M42 44l22 10-22 10z' fill='%23e94560'/%3E%3C/svg%3E">
+<style>
+:root{
+  --c-primary:#e94560;
+  --c-primary-light:#ff6b81;
+  --c-primary-dark:#b52d45;
+  --c-bg:#f7f8fc;
+  --c-surface:#ffffff;
+  --c-text:#1a1a2e;
+  --c-text-2:#4a4a6a;
+  --c-text-3:#8888a0;
+  --c-border:#e4e6ef;
+  --c-dark:#16162a;
+  --radius-card:12px;
+  --radius-btn:8px;
+  --radius-tag:6px;
+  --radius-banner:16px;
+  --shadow:0 2px 10px rgba(26,26,46,.06);
+  --shadow-hover:0 8px 24px rgba(26,26,46,.12);
+  --font-sys:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --header-h:56px;
+  --notice-h:40px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + var(--notice-h) + 12px)}
+body{
+  font-family:var(--font-sys);
+  background:var(--c-bg);
+  color:var(--c-text);
+  line-height:1.7;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+ul,ol{list-style:none}
+
+/* ===== 吸顶公告条 ===== */
+.notice-bar{
+  position:sticky;top:0;z-index:100;
+  height:var(--notice-h);
+  background:linear-gradient(90deg,var(--c-dark),#23233d);
+  color:#e8e8f2;
+  display:flex;align-items:center;
+  font-size:13px;
+  overflow:hidden;
+}
+.notice-bar .nb-inner{
+  max-width:1360px;margin:0 auto;padding:0 20px;
+  display:flex;align-items:center;gap:16px;width:100%;
+  white-space:nowrap;overflow:hidden;
+}
+.notice-bar .nb-brand{
+  font-weight:700;color:var(--c-primary-light);flex-shrink:0;
+  letter-spacing:.3px;
+}
+.notice-bar .nb-item{
+  display:inline-flex;align-items:center;gap:6px;flex-shrink:0;
+}
+.notice-bar .nb-date{
+  color:#9a9ab8;font-variant-numeric:tabular-nums;
+}
+.notice-bar .nb-dot{
+  width:5px;height:5px;border-radius:50%;background:var(--c-primary);flex-shrink:0;
+}
+.notice-bar .nb-scroll{
+  display:flex;gap:28px;animation:nbFlow 28s linear infinite;
+}
+@keyframes nbFlow{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+@media (prefers-reduced-motion:reduce){
+  .notice-bar .nb-scroll{animation:none}
+}
+
+/* ===== 页头 ===== */
+.site-header{
+  position:sticky;top:var(--notice-h);z-index:99;
+  height:var(--header-h);
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--c-border);
+}
+.header-inner{
+  max-width:1360px;margin:0 auto;padding:0 20px;
+  height:100%;display:flex;align-items:center;gap:28px;
+}
+.brand{
+  display:flex;align-items:center;gap:9px;flex-shrink:0;
+}
+.brand svg{width:28px;height:28px;flex-shrink:0}
+.brand-text{
+  font-size:16px;font-weight:700;color:var(--c-text);
+  letter-spacing:.2px;
+}
+.main-nav{
+  display:flex;align-items:center;gap:22px;flex:1;
+  overflow:hidden;
+}
+.main-nav a{
+  font-size:14px;color:var(--c-text-2);font-weight:500;
+  padding:4px 2px;border-bottom:2px solid transparent;
+  transition:color .18s,border-color .18s;
+  white-space:nowrap;
+}
+.main-nav a:hover{color:var(--c-primary);border-color:var(--c-primary)}
+.header-search{
+  display:flex;align-items:center;gap:8px;flex-shrink:0;
+}
+.header-search input{
+  width:150px;height:34px;padding:0 12px;
+  border:1px solid var(--c-border);border-radius:var(--radius-btn);
+  font-size:13px;background:var(--c-bg);outline:none;
+  transition:border-color .2s,width .25s;
+}
+.header-search input:focus{
+  border-color:var(--c-primary);width:200px;background:#fff;
+}
+.header-search button{
+  height:34px;padding:0 14px;
+  background:var(--c-primary);color:#fff;border:none;
+  border-radius:var(--radius-btn);font-size:13px;font-weight:600;
+  transition:background .18s;
+}
+.header-search button:hover{background:var(--c-primary-dark)}
+.menu-toggle{
+  display:none;width:36px;height:36px;border:1px solid var(--c-border);
+  background:#fff;border-radius:var(--radius-btn);
+  align-items:center;justify-content:center;flex-shrink:0;
+}
+.menu-toggle svg{width:18px;height:18px}
+
+/* ===== 首屏 ===== */
+.hero{
+  background:
+    radial-gradient(ellipse 60% 80% at 85% 20%, rgba(233,69,96,.18), transparent 60%),
+    radial-gradient(ellipse 50% 70% at 10% 90%, rgba(50,60,140,.35), transparent 60%),
+    linear-gradient(135deg,#12121f 0%,#1c1c3a 50%,#23233d 100%);
+  color:#fff;
+  overflow:hidden;
+  position:relative;
+}
+.hero-inner{
+  max-width:1360px;margin:0 auto;padding:56px 20px 52px;
+  display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;
+}
+.hero-content{position:relative;z-index:2}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:12px;font-weight:600;color:var(--c-primary-light);
+  background:rgba(233,69,96,.14);
+  border:1px solid rgba(233,69,96,.3);
+  padding:5px 12px;border-radius:20px;margin-bottom:18px;
+  letter-spacing:.5px;
+}
+.hero-badge .dot{
+  width:6px;height:6px;border-radius:50%;background:var(--c-primary);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{
+  font-size:clamp(28px,4vw,44px);
+  font-weight:800;line-height:1.25;
+  letter-spacing:-.5px;margin-bottom:16px;
+  background:linear-gradient(90deg,#fff 40%,#ffb3c1);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  word-break:break-all;
+}
+.hero-desc{
+  font-size:15px;color:#b8b8d0;max-width:560px;line-height:1.8;
+  margin-bottom:26px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  height:44px;padding:0 24px;
+  background:var(--c-primary);color:#fff;
+  border-radius:var(--radius-btn);font-size:14px;font-weight:600;
+  border:none;transition:background .18s,transform .18s,box-shadow .18s;
+}
+.btn-primary:hover{background:var(--c-primary-dark);transform:translateY(-2px);box-shadow:0 8px 20px rgba(233,69,96,.35)}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  height:44px;padding:0 22px;
+  background:rgba(255,255,255,.08);color:#e8e8f2;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--radius-btn);font-size:14px;font-weight:500;
+  transition:background .18s,border-color .18s;
+}
+.btn-ghost:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.32)}
+.hero-visual{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;gap:12px;
+}
+.hero-frame{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius-banner);
+  padding:16px;
+  backdrop-filter:blur(4px);
+}
+.hero-frame-title{
+  font-size:12px;color:#9a9ab8;letter-spacing:1px;
+  margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;
+}
+.hero-frame-title span:last-child{color:var(--c-primary-light);font-weight:600}
+.hero-film-row{
+  display:flex;gap:10px;margin-bottom:12px;
+}
+.hero-film-poster{
+  width:68px;height:96px;border-radius:6px;object-fit:cover;
+  border:1px solid rgba(255,255,255,.15);
+  flex-shrink:0;
+}
+.hero-film-meta{flex:1;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.hero-film-name{font-size:13px;font-weight:600;color:#fff}
+.hero-film-tag{font-size:11px;color:#9a9ab8}
+.hero-film-score{font-size:18px;font-weight:700;color:#ffd166;line-height:1}
+.hero-film-score small{font-size:11px;color:#9a9ab8;font-weight:400;margin-left:3px}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+}
+.hero-stat{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;padding:10px 12px;text-align:center;
+}
+.hero-stat b{display:block;font-size:18px;color:var(--c-primary-light);font-weight:700;font-variant-numeric:tabular-nums}
+.hero-stat span{font-size:11px;color:#9a9ab8}
+
+/* ===== 布局 ===== */
+.layout{
+  max-width:1360px;margin:0 auto;padding:32px 20px 56px;
+  display:grid;grid-template-columns:200px 1fr 280px;gap:28px;
+  align-items:start;
+}
+/* ===== 左频道栏 ===== */
+.channel-nav{
+  position:sticky;top:calc(var(--header-h) + var(--notice-h) + 16px);
+  background:var(--c-surface);
+  border:1px solid var(--c-border);
+  border-radius:var(--radius-card);
+  padding:16px 0;
+  box-shadow:var(--shadow);
+}
+.channel-nav h2{
+  font-size:12px;font-weight:700;color:var(--c-text-3);
+  letter-spacing:1.2px;padding:0 18px 10px;
+  text-transform:uppercase;
+}
+.channel-nav ul{display:flex;flex-direction:column}
+.channel-nav a{
+  display:flex;align-items:center;gap:9px;
+  padding:9px 18px;font-size:13.5px;color:var(--c-text-2);
+  border-left:3px solid transparent;
+  transition:background .16s,color .16s,border-color .16s;
+}
+.channel-nav a:hover{background:var(--c-bg);color:var(--c-primary)}
+.channel-nav a .ch-icon{font-size:14px;width:18px;text-align:center;flex-shrink:0}
+.channel-nav a .ch-count{
+  margin-left:auto;font-size:11px;color:var(--c-text-3);
+  background:var(--c-bg);padding:1px 7px;border-radius:9px;
+}
+
+/* ===== 主内容 ===== */
+.main-col{min-width:0;display:flex;flex-direction:column;gap:32px}
+.section{
+  background:var(--c-surface);
+  border:1px solid var(--c-border);
+  border-radius:var(--radius-card);
+  padding:26px 26px 24px;
+  box-shadow:var(--shadow);
+}
+.section-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  gap:16px;margin-bottom:20px;
+}
+.section-head h2{
+  font-size:20px;font-weight:800;letter-spacing:-.3px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-head h2::before{
+  content:"";width:4px;height:20px;border-radius:2px;
+  background:var(--c-primary);flex-shrink:0;
+}
+.section-head .sh-more{
+  font-size:12.5px;color:var(--c-text-3);font-weight:500;
+  white-space:nowrap;transition:color .16s;
+}
+.section-head .sh-more:hover{color:var(--c-primary)}
+
+/* 概览段落 */
+.overview-text{font-size:14.5px;color:var(--c-text-2);line-height:1.85}
+.overview-text p{margin-bottom:12px}
+.overview-text p:last-child{margin-bottom:0}
+.overview-text strong{color:var(--c-text);font-weight:700}
+
+/* 精选卡片网格 */
+.card-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.content-card{
+  border:1px solid var(--c-border);border-radius:10px;
+  overflow:hidden;background:var(--c-surface);
+  transition:transform .2s,box-shadow .2s;
+  display:flex;flex-direction:column;
+}
+.content-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.card-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:#e9eaf2}
+.card-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.content-card:hover .card-thumb img{transform:scale(1.04)}
+.card-type{
+  position:absolute;top:8px;left:8px;
+  font-size:10.5px;font-weight:700;color:#fff;
+  background:rgba(22,22,42,.78);backdrop-filter:blur(4px);
+  padding:2px 8px;border-radius:4px;letter-spacing:.3px;
+}
+.card-score{
+  position:absolute;bottom:8px;right:8px;
+  font-size:13px;font-weight:800;color:#ffd166;
+  background:rgba(22,22,42,.82);backdrop-filter:blur(4px);
+  padding:1px 8px;border-radius:5px;font-variant-numeric:tabular-nums;
+}
+.card-body{padding:12px 13px 14px;display:flex;flex-direction:column;flex:1}
+.card-title{
+  font-size:14.5px;font-weight:700;line-height:1.4;
+  margin-bottom:6px;color:var(--c-text);
+}
+.card-desc{
+  font-size:12.5px;color:var(--c-text-3);line-height:1.6;
+  margin-bottom:10px;flex:1;
+}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.tag{
+  font-size:11px;color:var(--c-primary-dark);
+  background:rgba(233,69,96,.08);
+  padding:1px 8px;border-radius:var(--radius-tag);
+  white-space:nowrap;
+}
+.card-meta{
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:11px;color:var(--c-text-3);margin-top:auto;
+  padding-top:8px;border-top:1px solid var(--c-border);
+}
+.card-meta .cm-hot{color:var(--c-primary);font-weight:600}
+
+/* 更新列表 */
+.update-list{display:flex;flex-direction:column}
+.update-item{
+  display:flex;gap:14px;padding:12px 0;
+  border-bottom:1px dashed var(--c-border);
+  align-items:flex-start;
+}
+.update-item:last-child{border-bottom:none;padding-bottom:0}
+.update-item:first-child{padding-top:0}
+.up-idx{
+  width:22px;height:22px;border-radius:5px;
+  background:var(--c-bg);color:var(--c-text-3);
+  font-size:11px;font-weight:700;display:flex;
+  align-items:center;justify-content:center;flex-shrink:0;
+  margin-top:3px;font-variant-numeric:tabular-nums;
+}
+.up-idx.hot{background:rgba(233,69,96,.1);color:var(--c-primary)}
+.up-content{flex:1;min-width:0}
+.up-title{
+  font-size:14px;font-weight:600;color:var(--c-text);
+  margin-bottom:2px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+}
+.up-title .badge-new{
+  font-size:10px;font-weight:700;color:#fff;background:var(--c-primary);
+  padding:0 6px;border-radius:3px;letter-spacing:.3px;
+}
+.up-summary{font-size:12.5px;color:var(--c-text-3);line-height:1.55}
+.up-time{
+  font-size:11px;color:var(--c-text-3);flex-shrink:0;
+  margin-top:4px;font-variant-numeric:tabular-nums;
+}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat-entry{
+  display:flex;flex-direction:column;align-items:center;gap:7px;
+  padding:16px 8px;border:1px solid var(--c-border);border-radius:10px;
+  background:var(--c-bg);transition:border-color .18s,background .18s,transform .18s;
+  text-align:center;
+}
+.cat-entry:hover{border-color:var(--c-primary);background:rgba(233,69,96,.04);transform:translateY(-2px)}
+.cat-entry .ce-icon{font-size:22px;line-height:1}
+.cat-entry .ce-name{font-size:13px;font-weight:600;color:var(--c-text)}
+.cat-entry .ce-count{font-size:11px;color:var(--c-text-3)}
+
+/* 深度解析 */
+.deep-read{font-size:14.5px;line-height:1.85;color:var(--c-text-2)}
+.deep-read h3{
+  font-size:16.5px;font-weight:700;color:var(--c-text);
+  margin:22px 0 10px;padding-left:12px;
+  border-left:3px solid var(--c-primary);
+}
+.deep-read h3:first-child{margin-top:0}
+.deep-read p{margin-bottom:12px}
+.deep-read ul{margin:8px 0 14px;padding-left:0}
+.deep-read ul li{
+  position:relative;padding-left:18px;margin-bottom:6px;
+  font-size:14px;
+}
+.deep-read ul li::before{
+  content:"";position:absolute;left:2px;top:9px;
+  width:5px;height:5px;border-radius:50%;background:var(--c-primary-light);
+}
+.deep-read .cmp-table{
+  width:100%;border-collapse:collapse;margin:12px 0 16px;
+  font-size:13px;
+}
+.deep-read .cmp-table th,.deep-read .cmp-table td{
+  border:1px solid var(--c-border);padding:8px 10px;text-align:left;
+}
+.deep-read .cmp-table th{background:var(--c-bg);font-weight:700;color:var(--c-text)}
+.deep-read .cmp-table td{color:var(--c-text-2)}
+
+/* 指南步骤 */
+.guide-steps{display:flex;flex-direction:column;gap:0;counter-reset:step}
+.guide-step{
+  display:flex;gap:16px;padding:16px 0;
+  border-bottom:1px solid var(--c-border);
+  position:relative;
+}
+.guide-step:last-child{border-bottom:none;padding-bottom:0}
+.guide-step:first-child{padding-top:0}
+.step-num{
+  width:30px;height:30px;border-radius:50%;
+  background:var(--c-primary);color:#fff;
+  font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-variant-numeric:tabular-nums;
+}
+.step-content{flex:1;min-width:0}
+.step-title{font-size:14.5px;font-weight:700;color:var(--c-text);margin-bottom:4px}
+.step-desc{font-size:13px;color:var(--c-text-2);line-height:1.7}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:0}
+.faq-item{border-bottom:1px solid var(--c-border)}
+.faq-item:last-child{border-bottom:none}
+.faq-item summary{
+  display:flex;align-items:center;gap:10px;
+  padding:14px 0;font-size:14.5px;font-weight:600;
+  color:var(--c-text);cursor:pointer;list-style:none;
+  transition:color .16s;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::before{
+  content:"+";width:20px;height:20px;border-radius:50%;
+  background:var(--c-bg);color:var(--c-primary);
+  font-size:14px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;transition:transform .2s,background .2s;
+}
+.faq-item[open] summary::before{
+  content:"−";background:var(--c-primary);color:#fff;
+}
+.faq-item summary:hover{color:var(--c-primary)}
+.faq-answer{
+  font-size:13.5px;color:var(--c-text-2);line-height:1.8;
+  padding:0 0 16px 30px;
+}
+
+/* 评论 */
+.comment-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.comment-item{
+  background:var(--c-bg);border-radius:10px;padding:13px 14px;
+  display:flex;flex-direction:column;gap:7px;
+  border:1px solid transparent;
+  transition:border-color .16s;
+}
+.comment-item:hover{border-color:var(--c-border)}
+.cm-head{display:flex;align-items:center;gap:8px}
+.cm-avatar{
+  width:26px;height:26px;border-radius:50%;
+  background:linear-gradient(135deg,var(--c-primary),#7a4de8);
+  color:#fff;font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.cm-name{font-size:12.5px;font-weight:600;color:var(--c-text)}
+.cm-stars{margin-left:auto;font-size:10px;color:#f5a623;letter-spacing:1px}
+.cm-text{font-size:13px;color:var(--c-text-2);line-height:1.65}
+.cm-ref{font-size:11px;color:var(--c-primary-dark);font-weight:500}
+
+/* 资讯 */
+.news-list{display:flex;flex-direction:column;gap:0}
+.news-item{
+  display:flex;gap:14px;padding:14px 0;
+  border-bottom:1px dashed var(--c-border);
+}
+.news-item:last-child{border-bottom:none;padding-bottom:0}
+.news-item:first-child{padding-top:0}
+.news-date{
+  font-size:11.5px;color:var(--c-text-3);font-weight:600;
+  flex-shrink:0;width:58px;margin-top:2px;
+  font-variant-numeric:tabular-nums;
+}
+.news-body{flex:1;min-width:0}
+.news-title{font-size:14px;font-weight:700;color:var(--c-text);margin-bottom:3px;line-height:1.45}
+.news-title:hover{color:var(--c-primary)}
+.news-summary{font-size:12.5px;color:var(--c-text-3);line-height:1.6}
+
+/* 相关推荐标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tag{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:13px;color:var(--c-text-2);
+  background:var(--c-bg);border:1px solid var(--c-border);
+  padding:6px 14px;border-radius:20px;
+  transition:background .16s,color .16s,border-color .16s;
+}
+.rec-tag:hover{background:var(--c-primary);color:#fff;border-color:var(--c-primary)}
+.rec-tag .rt-count{font-size:11px;color:var(--c-text-3)}
+.rec-tag:hover .rt-count{color:rgba(255,255,255,.8)}
+
+/* 榜单 */
+.rank-table{width:100%;border-collapse:collapse;font-size:13px}
+.rank-table th{
+  text-align:left;font-size:11px;color:var(--c-text-3);
+  font-weight:600;padding:0 10px 8px;border-bottom:1px solid var(--c-border);
+  letter-spacing:.5px;
+}
+.rank-table td{
+  padding:10px;border-bottom:1px dashed var(--c-border);
+  color:var(--c-text-2);vertical-align:middle;
+}
+.rank-table tr:last-child td{border-bottom:none}
+.rank-table .rk-num{
+  font-weight:800;font-size:15px;color:var(--c-text-3);
+  width:36px;font-variant-numeric:tabular-nums;
+}
+.rank-table .rk-num.top{color:var(--c-primary)}
+.rank-table .rk-title{font-weight:600;color:var(--c-text);font-size:13.5px}
+.rank-table .rk-type{font-size:11px;color:var(--c-text-3)}
+.rank-table .rk-score{
+  font-weight:700;color:#f5a623;text-align:right;font-variant-numeric:tabular-nums;
+}
+.rank-table .rk-trend{font-size:11px;text-align:right;font-variant-numeric:tabular-nums}
+.rk-trend.up{color:#2e9e5b}
+.rk-trend.down{color:#d64545}
+
+/* 投稿互动 */
+.submit-panel{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+}
+.submit-card{
+  border:1px solid var(--c-border);border-radius:10px;
+  padding:18px 18px 16px;background:linear-gradient(160deg,var(--c-bg),#fff);
+}
+.submit-card h3{font-size:15px;font-weight:700;margin-bottom:6px;color:var(--c-text)}
+.submit-card p{font-size:12.5px;color:var(--c-text-3);line-height:1.65;margin-bottom:12px}
+.submit-card .sc-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12.5px;font-weight:600;color:var(--c-primary);
+  border:1px solid var(--c-primary);border-radius:var(--radius-btn);
+  padding:5px 14px;background:transparent;
+  transition:background .16s,color .16s;
+}
+.submit-card .sc-btn:hover{background:var(--c-primary);color:#fff}
+
+/* ===== 右辅助栏 ===== */
+.aside-col{
+  position:sticky;top:calc(var(--header-h) + var(--notice-h) + 16px);
+  display:flex;flex-direction:column;gap:20px;
+}
+.aside-card{
+  background:var(--c-surface);
+  border:1px solid var(--c-border);
+  border-radius:var(--radius-card);
+  padding:20px 18px;
+  box-shadow:var(--shadow);
+}
+.aside-card h3{
+  font-size:14px;font-weight:800;margin-bottom:14px;
+  display:flex;align-items:center;gap:8px;
+  letter-spacing:-.2px;
+}
+.aside-card h3::before{
+  content:"";width:3px;height:15px;border-radius:2px;
+  background:var(--c-primary);flex-shrink:0;
+}
+.hot-list{display:flex;flex-direction:column;gap:0}
+.hot-item{
+  display:flex;gap:10px;padding:9px 0;
+  border-bottom:1px dashed var(--c-border);
+  align-items:flex-start;
+}
+.hot-item:last-child{border-bottom:none;padding-bottom:0}
+.hot-item:first-child{padding-top:0}
+.hot-num{
+  width:18px;height:18px;border-radius:4px;
+  background:var(--c-bg);color:var(--c-text-3);
+  font-size:10px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  margin-top:3px;font-variant-numeric:tabular-nums;
+}
+.hot-num.top1{background:var(--c-primary);color:#fff}
+.hot-num.top2{background:rgba(233,69,96,.6);color:#fff}
+.hot-num.top3{background:rgba(233,69,96,.3);color:var(--c-primary-dark)}
+.hot-info{flex:1;min-width:0}
+.hot-title{font-size:12.5px;font-weight:600;color:var(--c-text);line-height:1.4}
+.hot-meta{font-size:10.5px;color:var(--c-text-3);margin-top:1px}
+.timeline{display:flex;flex-direction:column;gap:0;position:relative;padding-left:14px}
+.timeline::before{
+  content:"";position:absolute;left:3px;top:4px;bottom:4px;
+  width:1.5px;background:var(--c-border);
+}
+.tl-item{position:relative;padding-bottom:14px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-14px;top:5px;
+  width:8px;height:8px;border-radius:50%;
+  background:#fff;border:2px solid var(--c-primary);
+}
+.tl-date{font-size:10.5px;color:var(--c-text-3);font-weight:600;font-variant-numeric:tabular-nums}
+.tl-text{font-size:12.5px;color:var(--c-text-2);line-height:1.55;margin-top:1px}
+
+/* ===== 页尾 ===== */
+.site-footer{
+  background:var(--c-dark);color:#b8b8d0;
+  margin-top:8px;
+}
+.footer-inner{
+  max-width:1360px;margin:0 auto;padding:40px 20px 28px;
+}
+.footer-top{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;
+  padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.footer-brand{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.footer-brand svg{width:26px;height:26px}
+.footer-brand span{font-size:16px;font-weight:700;color:#fff}
+.footer-desc{font-size:12.5px;line-height:1.75;color:#9a9ab8;max-width:320px}
+.footer-col h4{
+  font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;
+  letter-spacing:.3px;
+}
+.footer-col ul{display:flex;flex-direction:column;gap:7px}
+.footer-col a{font-size:12.5px;color:#9a9ab8;transition:color .16s}
+.footer-col a:hover{color:var(--c-primary-light)}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding-top:20px;flex-wrap:wrap;
+}
+.footer-bottom p{font-size:11.5px;color:#6b6b88;line-height:1.7}
+.footer-bottom .fb-right{font-size:11.5px;color:#6b6b88}
+
+/* 回到顶部 */
+.back-top{
+  position:fixed;right:24px;bottom:28px;z-index:80;
+  width:42px;height:42px;border-radius:50%;
+  background:var(--c-primary);color:#fff;
+  border:none;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(233,69,96,.4);
+  opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .25s,visibility .25s,transform .25s,background .18s;
+}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.back-top:hover{background:var(--c-primary-dark)}
+.back-top svg{width:18px;height:18px}
+
+/* 移动遮罩 */
+.overlay{
+  display:none;position:fixed;inset:0;z-index:98;
+  background:rgba(22,22,42,.5);backdrop-filter:blur(2px);
+}
+.overlay.show{display:block}
+
+/* 筛选无结果 */
+.no-result{
+  padding:24px;text-align:center;color:var(--c-text-3);
+  font-size:13.5px;display:none;
+}
+.no-result.show{display:block}
+
+/* ===== 响应式 ===== */
+@media (max-width:1180px){
+  .layout{grid-template-columns:180px 1fr 250px;gap:22px}
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:1024px){
+  .layout{grid-template-columns:1fr 260px}
+  .channel-nav{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-visual{max-width:420px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:24px}
+}
+@media (max-width:740px){
+  :root{--header-h:52px;--notice-h:36px}
+  .layout{grid-template-columns:1fr;padding:22px 14px 40px;gap:22px}
+  .aside-col{position:static;order:2}
+  .main-col{order:1}
+  .main-nav{
+    position:fixed;top:calc(var(--notice-h) + var(--header-h));
+    left:0;right:0;z-index:99;
+    background:#fff;flex-direction:column;align-items:stretch;
+    padding:12px 16px;gap:0;
+    border-bottom:1px solid var(--c-border);
+    box-shadow:0 12px 24px rgba(0,0,0,.08);
+    transform:translateY(-8px);opacity:0;visibility:hidden;
+    transition:opacity .22s,transform .22s,visibility .22s;
+    max-height:calc(100vh - var(--notice-h) - var(--header-h));
+    overflow-y:auto;
+  }
+  .main-nav.open{transform:translateY(0);opacity:1;visibility:visible}
+  .main-nav a{padding:12px 4px;border-bottom:1px solid var(--c-border);font-size:15px}
+  .main-nav a:last-child{border-bottom:none}
+  .menu-toggle{display:flex}
+  .header-search{flex:1;justify-content:flex-end}
+  .header-search input{width:120px}
+  .header-search input:focus{width:150px}
+  .brand-text{font-size:14px}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .comment-list{grid-template-columns:1fr}
+  .submit-panel{grid-template-columns:1fr}
+  .hero-inner{padding:36px 16px 32px}
+  .hero h1{font-size:26px}
+  .hero-desc{font-size:14px}
+  .section{padding:20px 16px}
+  .section-head h2{font-size:18px}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .back-top{right:16px;bottom:20px;width:38px;height:38px}
+  .deep-read .cmp-table{font-size:12px}
+  .deep-read .cmp-table th,.deep-read .cmp-table td{padding:6px 7px}
+  .rank-table{font-size:12px}
+  .rank-table th,.rank-table td{padding:8px 6px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== 吸顶公告条 ===== -->
+<div class="notice-bar" role="region" aria-label="最新更新公告">
+  <div class="nb-inner">
+    <span class="nb-brand">www.hlbdy13.com</span>
+    <span class="nb-dot" aria-hidden="true"></span>
+    <div class="nb-scroll">
+      <span class="nb-item"><span class="nb-date">11月8日</span>《雾港深流》第6集上线</span>
+      <span class="nb-item"><span class="nb-date">11月7日</span>科幻片单新增 14 部</span>
+      <span class="nb-item"><span class="nb-date">11月6日</span>悬疑条目《第七封信》评分升至 8.6</span>
+      <span class="nb-item"><span class="nb-date">11月8日</span>《雾港深流》第6集上线</span>
+      <span class="nb-item"><span class="nb-date">11月7日</span>科幻片单新增 14 部</span>
+      <span class="nb-item"><span class="nb-date">11月6日</span>悬疑条目《第七封信》评分升至 8.6</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 页头 ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/#top" aria-label="www.hlbdy13.com 首页">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <rect width="100" height="100" rx="22" fill="#16162a"/>
+        <path d="M24 32h44a10 10 0 0 1 10 10v26a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10V42a10 10 0 0 1 10-10z" fill="none" stroke="#e94560" stroke-width="6"/>
+        <path d="M42 44l22 10-22 10z" fill="#e94560"/>
+      </svg>
+      <span class="brand-text">www.hlbdy13.com</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">影视概览</a>
+      <a href="/#featured">精选片单</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deep-dive">深度解析</a>
+      <a href="/#guide">观影指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#submit">投稿互动</a>
+    </nav>
+    <div class="header-search" role="search">
+      <input type="search" id="siteSearch" placeholder="搜索条目/类型" aria-label="搜索条目或类型">
+      <button type="button" id="searchBtn">查找</button>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mainNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+  </div>
+</header>
+<div class="overlay" id="overlay" aria-hidden="true"></div>
+
+<!-- ===== 首屏 ===== -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="hero-badge"><span class="dot" aria-hidden="true"></span>2026 年 11 月 8 日 更新</span>
+      <h1>www.hlbdy13.com</h1>
+      <p class="hero-desc">聚合科幻、悬疑、剧情、动作等高清影视条目。按评分、年份、类型筛选片单，收录《雾港深流》《第七封信》《山海之外》等 2026 年新作与经典条目，附深度解析与真实用户短评。</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="/#featured">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          浏览精选片单
+        </a>
+        <a class="btn-ghost" href="/#updates">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 8v5l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+          查看最新更新
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-frame">
+        <div class="hero-frame-title"><span>今日热度条目</span><span>实时</span></div>
+        <div class="hero-film-row">
+          <img class="hero-film-poster" src="https://picsum.photos/seed/fogport6/400/600" width="400" height="600" alt="《雾港深流》第6集剧照" loading="lazy">
+          <div class="hero-film-meta">
+            <span class="hero-film-name">雾港深流</span>
+            <span class="hero-film-tag">悬疑 · 2026 · 更新至第6集</span>
+            <span class="hero-film-score">8.9<small>/ 10</small></span>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>1842</b><span>收录条目</span></div>
+          <div class="hero-stat"><b>36</b><span>本周新增</span></div>
+          <div class="hero-stat"><b>11.8</b><span>更新日期</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 主布局 ===== -->
+<div class="layout">
+
+  <!-- 左频道栏 -->
+  <aside class="channel-nav" aria-label="频道导航">
+    <h2>频道索引</h2>
+    <ul>
+      <li><a href="/#overview"><span class="ch-icon">◈</span>影视概览<span class="ch-count">12</span></a></li>
+      <li><a href="/#featured"><span class="ch-icon">★</span>精选片单<span class="ch-count">9</span></a></li>
+      <li><a href="/#updates"><span class="ch-icon">↻</span>最新更新<span class="ch-count">10</span></a></li>
+      <li><a href="/#categories"><span class="ch-icon">▤</span>分类入口<span class="ch-count">8</span></a></li>
+      <li><a href="/#deep-dive"><span class="ch-icon">▦</span>深度解析<span class="ch-count">1</span></a></li>
+      <li><a href="/#guide"><span class="ch-icon">➤</span>观影指南<span class="ch-count">5</span></a></li>
+      <li><a href="/#faq"><span class="ch-icon">?</span>常见问答<span class="ch-count">6</span></a></li>
+      <li><a href="/#comments"><span class="ch-icon">✎</span>用户评论<span class="ch-count">16</span></a></li>
+      <li><a href="/#news"><span class="ch-icon">◎</span>相关资讯<span class="ch-count">6</span></a></li>
+      <li><a href="/#recommend"><span class="ch-icon">⌕</span>相关推荐<span class="ch-count">8</span></a></li>
+      <li><a href="/#ranking"><span class="ch-icon">▲</span>热门榜单<span class="ch-count">10</span></a></li>
+      <li><a href="/#submit"><span class="ch-icon">✉</span>投稿互动<span class="ch-count">2</span></a></li>
+    </ul>
+  </aside>
+
+  <!-- 主内容 -->
+  <main class="main-col">
+
+    <!-- 1. 主题领域概览 -->
+    <section class="section" id="overview">
+      <div class="section-head">
+        <h2>高清影视条目聚合方向</h2>
+        <a class="sh-more" href="/#featured">查看片单 →</a>
+      </div>
+      <div class="overview-text">
+        <p>影视条目聚合站把一部作品拆成可检索的要素：片名、导演、主演、年份、类型标签、评分、集数更新状态。用户打开页面通常带着两个目的——找一部能看下去的片子，或确认某部作品是否值得投入时间。2026 年 11 月这个时间点上，<strong>悬疑剧集</strong>与<strong>科幻电影</strong>是条目增长最快的两个方向，分别对应流媒体平台年末冲量与颁奖季前展映。</p>
+        <p>从类型分布看，当前收录的条目集中在五类：悬疑推理（《雾港深流》《第七封信》）、科幻硬核（《银翼残响》《轨道之外》）、现实剧情（《山海之外》《三个夏天》）、动作犯罪（《暗巷追击》《铁幕之下》）、动画长片（《云上邮差》《星尘旅人》）。每类下面又有细分，比如悬疑里分本格推理与社会派，科幻里分硬科幻与太空歌剧。标签越细，筛选越准，但标签过多也会稀释匹配精度——这是条目库设计时反复权衡的地方。</p>
+        <p>评分体系采用 10 分制，参考豆瓣、IMDb 与站内用户打分加权。新条目上线 48 小时内只显示“暂无评分”，等样本量过 200 才出分。这样做的代价是部分小众片长期没有评分，好处是避免首日刷分干扰判断。片单编辑每周三更新一次，2026 年 11 月 5 日那批新增了 9 部科幻条目，其中 3 部为首次收录。</p>
+      </div>
+    </section>
+
+    <!-- 2. 精选内容推荐 -->
+    <section class="section" id="featured">
+      <div class="section-head">
+        <h2>精选影片与剧集条目</h2>
+        <a class="sh-more" href="/#ranking">看榜单 →</a>
+      </div>
+      <div class="card-grid" id="featuredGrid">
+        <article class="content-card" data-tags="悬疑 剧集 2026">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/fogport6b/400/300" width="400" height="300" alt="《雾港深流》港口迷雾剧照" loading="lazy">
+            <span class="card-type">悬疑剧集</span>
+            <span class="card-score">8.9</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">雾港深流</h3>
+            <p class="card-desc">港口城市连环失踪案牵出十五年前的旧案。第 6 集结尾码头对峙戏一镜到底，导演用潮汐时间表做叙事锚点，细节密。</p>
+            <div class="card-tags"><span class="tag">本格推理</span><span class="tag">双线叙事</span><span class="tag">更新至第6集</span></div>
+            <div class="card-meta"><span>2026-11-08 更新</span><span class="cm-hot">热度 9.4 万</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-tags="科幻 电影 2026">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/silverecho/400/300" width="400" height="300" alt="《银翼残响》太空舱内景" loading="lazy">
+            <span class="card-type">科幻电影</span>
+            <span class="card-score">8.4</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">银翼残响</h3>
+            <p class="card-desc">近未来记忆修复技术失控，主角在三次记忆回溯里拼出同一场事故的不同版本。硬设定经得起暂停帧推敲。</p>
+            <div class="card-tags"><span class="tag">硬科幻</span><span class="tag">记忆伦理</span><span class="tag">院线</span></div>
+            <div class="card-meta"><span>2026-10-24 上线</span><span class="cm-hot">热度 7.8 万</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-tags="剧情 剧集 2026">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/shanhai/400/300" width="400" height="300" alt="《山海之外》山村公路全景" loading="lazy">
+            <span class="card-type">现实剧情</span>
+            <span class="card-score">8.7</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">山海之外</h3>
+            <p class="card-desc">支教老师与三个学生的公路返乡记，第 4 集暴雨夜盘山公路那段用自然光拍摄，台词少但信息全在环境音里。</p>
+            <div class="card-tags"><span class="tag">乡村题材</span><span class="tag">公路叙事</span><span class="tag">12集全</span></div>
+            <div class="card-meta"><span>2026-10-30 完结</span><span class="cm-hot">热度 6.5 万</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-tags="悬疑 电影 2026">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/letter7/400/300" width="400" height="300" alt="《第七封信》桌面信件特写" loading="lazy">
+            <span class="card-type">悬疑电影</span>
+            <span class="card-score">8.6</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">第七封信</h3>
+            <p class="card-desc">七封匿名信按日期寄到同一地址，收信人身份逐封反转。剧本结构工整，第三幕法庭戏的证物链经得起逐帧核对。</p>
+            <div class="card-tags"><span class="tag">社会派</span><span class="tag">书信体</span><span class="tag">院线</span></div>
+            <div class="card-meta"><span>2026-10-18 上线</span><span class="cm-hot">热度 8.1 万</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-tags="动作 电影 2026">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/darkalley/400/300" width="400" height="300" alt="《暗巷追击》夜间巷道追逐" loading="lazy">
+            <span class="card-type">动作犯罪</span>
+            <span class="card-score">7.9</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">暗巷追击</h3>
+            <p class="card-desc">缉毒警与线人 72 小时内的三次交易变卦。动作设计偏写实，楼道近身格斗那段没有配乐，只有喘息和回声。</p>
+            <div class="card-tags"><span class="tag">警匪</span><span class="tag">近身格斗</span><span class="tag">限时叙事</span></div>
+            <div class="card-meta"><span>2026-11-02 上线</span><span class="cm-hot">热度 5.9 万</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-tags="动画 电影 2026">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/skyMail/400/300" width="400" height="300" alt="《云上邮差》手绘风格云海与飞行器" loading="lazy">
+            <span class="card-type">动画长片</span>
+            <span class="card-score">8.8</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">云上邮差</h3>
+            <p class="card-desc">架空世界里靠热气球送信的邮差，用七段投递串起小镇四季。手绘水彩背景，配乐用了手风琴与八音盒。</p>
+            <div class="card-tags"><span class="tag">手绘动画</span><span class="tag">治愈系</span><span class="tag">院线</span></div>
+            <div class="card-meta"><span>2026-10-12 上线</span><span class="cm-hot">热度 7.2 万</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-tags="科幻 剧集 2026">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/orbitout/400/300" width="400" height="300" alt="《轨道之外》空间站舷窗视角" loading="lazy">
+            <span class="card-type">科幻剧集</span>
+            <span class="card-score">8.2</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">轨道之外</h3>
+            <p class="card-desc">空间站失联 437 天后返回地球，七名宇航员带回一份时间戳对不上的日志。太空部分实拍微重力模拟，晃动感真实。</p>
+            <div class="card-tags"><span class="tag">太空科幻</span><span class="tag">封闭空间</span><span class="tag">更新至第8集</span></div>
+            <div class="card-meta"><span>2026-11-06 更新</span><span class="cm-hot">热度 6.8 万</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-tags="剧情 电影 2026">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/threeSummer/400/300" width="400" height="300" alt="《三个夏天》海边小镇全景" loading="lazy">
+            <span class="card-type">文艺剧情</span>
+            <span class="card-score">8.3</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">三个夏天</h3>
+            <p class="card-desc">同一座海边小镇，2008、2015、2026 三个夏天，三组人物互不相识却在同一间便利店留下痕迹。结构像拼图。</p>
+            <div class="card-tags"><span class="tag">三段式</span><span class="tag">时间跨度</span><span class="tag">院线</span></div>
+            <div class="card-meta"><span>2026-10-26 上线</span><span class="cm-hot">热度 5.4 万</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-tags="悬疑 剧集 2026">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/ironCurtain/400/300" width="400" height="300" alt="《铁幕之下》冷色调审讯室" loading="lazy">
+            <span class="card-type">犯罪剧集</span>
+            <span class="card-score">8.1</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">铁幕之下</h3>
+            <p class="card-desc">经济犯罪调查组追查跨境洗钱，第 5 集用一份 Excel 表格的公式错误锁定关键账户，查账戏拍得比枪战还紧张。</p>
+            <div class="card-tags"><span class="tag">经济犯罪</span><span class="tag">查账流</span><span class="tag">更新至第5集</span></div>
+            <div class="card-meta"><span>2026-11-04 更新</span><span class="cm-hot">热度 5.1 万</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="no-result" id="noResult">没有匹配的条目，换个关键词试试：悬疑、科幻、动画、2026</div>
+    </section>
+
+    <!-- 3. 最新更新 -->
+    <section class="section" id="updates">
+      <div class="section-head">
+        <h2>剧集与影片更新动态</h2>
+        <a class="sh-more" href="/#news">相关资讯 →</a>
+      </div>
+      <div class="update-list">
+        <div class="update-item">
+          <span class="up-idx hot">1</span>
+          <div class="up-content">
+            <div class="up-title">雾港深流 第6集<span class="badge-new">NEW</span></div>
+            <div class="up-summary">码头对峙戏一镜到底，潮汐时间表与失踪案时间线在结尾重合，片尾彩蛋出现第二封信的邮戳特写。</div>
+          </div>
+          <span class="up-time">11-08 09:20</span>
+        </div>
+        <div class="update-item">
+          <span class="up-idx hot">2</span>
+          <div class="up-content">
+            <div class="up-title">轨道之外 第8集<span class="badge-new">NEW</span></div>
+            <div class="up-summary">宇航员带回的日志时间戳比任务记录多出 11 分钟，地面控制中心开始逐帧比对舱内监控。</div>
+          </div>
+          <span class="up-time">11-06 21:10</span>
+        </div>
+        <div class="update-item">
+          <span class="up-idx">3</span>
+          <div class="up-content">
+            <div class="up-title">铁幕之下 第5集</div>
+            <div class="up-summary">查账组用一份 Excel 的循环引用错误锁定第三层壳公司，嫌疑人律师在讯问室外打了个电话。</div>
+          </div>
+          <span class="up-time">11-04 18:45</span>
+        </div>
+        <div class="update-item">
+          <span class="up-idx">4</span>
+          <div class="up-content">
+            <div class="up-title">暗巷追击 上线</div>
+            <div class="up-summary">缉毒警与线人第三次交易变卦，楼道近身格斗段落无配乐，喘息和铁门回声成为主要音效。</div>
+          </div>
+          <span class="up-time">11-02 14:00</span>
+        </div>
+        <div class="update-item">
+          <span class="up-idx">5</span>
+          <div class="up-content">
+            <div class="up-title">山海之外 第12集（完结）</div>
+            <div class="up-summary">公路尽头是学校新校舍落成，三个学生各自留下一封信，片尾字幕用真实支教老师的录音收尾。</div>
+          </div>
+          <span class="up-time">10-30 20:00</span>
+        </div>
+        <div class="update-item">
+          <span class="up-idx">6</span>
+          <div class="up-content">
+            <div class="up-title">三个夏天 上线</div>
+            <div class="up-summary">三段式结构中的便利店货架随年份更换，2008 年夏天的冰柜贴纸在 2026 年段落里原样出现。</div>
+          </div>
+          <span class="up-time">10-26 10:30</span>
+        </div>
+        <div class="update-item">
+          <span class="up-idx">7</span>
+          <div class="up-content">
+            <div class="up-title">银翼残响 上线</div>
+            <div class="up-summary">记忆修复技术第三次回溯的版本里，主角在事故现场看到的时钟指向与第一次回溯相差 4 分钟。</div>
+          </div>
+          <span class="up-time">10-24 19:00</span>
+        </div>
+        <div class="update-item">
+          <span class="up-idx">8</span>
+          <div class="up-content">
+            <div class="up-title">第七封信 评分更新</div>
+            <div class="up-summary">样本量过 5000 后评分从 8.5 升至 8.6，第三幕法庭戏的证物链细节在用户评论区被逐条拆解。</div>
+          </div>
+          <span class="up-time">11-06 16:30</span>
+        </div>
+        <div class="update-item">
+          <span class="up-idx">9</span>
+          <div class="up-content">
+            <div class="up-title">云上邮差 上线</div>
+            <div class="up-summary">七段投递串起小镇四季，第二段投递遇到暴雨，手绘水彩背景在雨幕段落用了三层透明叠加。</div>
+          </div>
+          <span class="up-time">10-12 11:00</span>
+        </div>
+        <div class="update-item">
+          <span class="up-idx">10</span>
+          <div class="up-content">
+            <div class="up-title">星尘旅人 条目收录</div>
+            <div class="up-summary">动画长片新条目入库，导演前作《云上邮差》的配乐团队继续合作，预告片已释出 90 秒片段。</div>
+          </div>
+          <span class="up-time">11-07 15:20</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section class="section" id="categories">
+      <div class="section-head">
+        <h2>按类型筛选条目</h2>
+        <a class="sh-more" href="/#featured">筛选片单 →</a>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-entry" href="/#featured"><span class="ce-icon">🔍</span><span class="ce-name">悬疑推理</span><span class="ce-count">326 条</span></a>
+        <a class="cat-entry" href="/#featured"><span class="ce-icon">🚀</span><span class="ce-name">科幻硬核</span><span class="ce-count">218 条</span></a>
+        <a class="cat-entry" href="/#featured"><span class="ce-icon">🎭</span><span class="ce-name">现实剧情</span><span class="ce-count">402 条</span></a>
+        <a class="cat-entry" href="/#featured"><span class="ce-icon">💥</span><span class="ce-name">动作犯罪</span><span class="ce-count">287 条</span></a>
+        <a class="cat-entry" href="/#featured"><span class="ce-icon">🎨</span><span class="ce-name">动画长片</span><span class="ce-count">156 条</span></a>
+        <a class="cat-entry" href="/#featured"><span class="ce-icon">📺</span><span class="ce-name">剧集连载</span><span class="ce-count">341 条</span></a>
+        <a class="cat-entry" href="/#featured"><span class="ce-icon">🎬</span><span class="ce-name">院线电影</span><span class="ce-count">198 条</span></a>
+        <a class="cat-entry" href="/#featured"><span class="ce-icon">📼</span><span class="ce-name">经典修复</span><span class="ce-count">114 条</span></a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析 -->
+    <section class="section" id="deep-dive">
+      <div class="section-head">
+        <h2>悬疑剧集与科幻电影的判断标尺</h2>
+      </div>
+      <div class="deep-read">
+        <h3>悬疑剧“本格”与“社会派”在条目里的区分</h3>
+        <p>《雾港深流》被不少用户归入本格推理，但第 4 集用整段篇幅讲失踪者家属的信访记录，社会派痕迹明显。区分两者在条目页面上只看一个指标：案件推进是否依赖社会关系网。本格的核心是线索可穷举、逻辑可还原，社会派的核心是动机嵌在制度缝隙里。《第七封信》属于后者，七封信的投递时间与一封法院传票日期完全重合，剧本把矛盾压在收信人身份上，法庭戏占了近 20 分钟。</p>
+        <p>条目描述里写“本格”还是“社会派”会影响点开率。2026 年 10 月 18 日至 11 月 8 日这段时间，标“本格”的悬疑条目平均点击比标“社会派”高 34%，但完播率反过来低 11 个百分点。数据来自站内 30 天滚动统计，样本量 4700 次点击。这个反差不说明哪种更好，只说明标签预期与实际体验存在错位。</p>
+        <h3>科幻电影的硬设定，怎么在条目页里核对</h3>
+        <p>《银翼残响》的记忆修复技术设定写了三条规则：单次回溯不超过 90 分钟、第三次回溯会产生记忆叠影、叠影不可逆。三条规则在片中都有对应场景，第三次回溯时主角看到的时钟比第一次快 4 分钟，这个细节在用户评论区被逐帧验证过。条目页把“硬科幻”标签与“设定规则”字段分开，前者是类型，后者是可核对的文本。</p>
+        <table class="cmp-table">
+          <thead><tr><th>核对项</th><th>银翼残响</th><th>轨道之外</th></tr></thead>
+          <tbody>
+            <tr><td>核心设定</td><td>记忆回溯 90 分钟上限</td><td>空间站时间戳偏差 11 分钟</td></tr>
+            <tr><td>规则是否自洽</td><td>第三次回溯叠影不可逆</td><td>日志时间戳比任务记录多 11 分钟</td></tr>
+            <tr><td>可验证细节</td><td>时钟快 4 分钟</td><td>舱内监控逐帧比对</td></tr>
+            <tr><td>用户核对结果</td><td>评论区 37 条逐帧帖</td><td>第 8 集播出后 12 小时出现对比图</td></tr>
+          </tbody>
+        </table>
+        <h3>条目评分为什么晚 48 小时才出</h3>
+        <p>新条目上线首日的打分样本里，粉丝向打分与情绪化一星占比明显偏高。站内规则是样本量过 200 且时间满 48 小时才显示评分，这两个条件同时满足才出分。以《暗巷追击》为例，11 月 2 日 14:00 上线，11 月 4 日 15:00 样本量达到 214，评分从“暂无”跳到 7.9，之后三天在 7.8 至 8.0 之间波动。同期的《三个夏天》上线 5 天样本量才过 200，评分直到 10 月 31 日才显示。</p>
+        <p>“暂无评分”的条目并非没有价值，只是判断依据从评分换成了标签密度、导演前作、用户短评里的具体描述。一个条目如果“悬疑”“双线叙事”“更新至第6集”三个标签同时出现，且短评里有人提到具体集数的细节，可信度高于只有评分没有评论的条目。</p>
+      </div>
+    </section>
+
+    <!-- 6. 观影指南 -->
+    <section class="section" id="guide">
+      <div class="section-head">
+        <h2>内容消费顺序与判断依据</h2>
+      </div>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <div class="step-title">先看类型标签，再看评分</div>
+            <div class="step-desc">评分是加权结果，类型标签才是匹配依据。一部 7.9 分的动作片对动作片受众的可用性，高于 8.6 分的文艺片。标签里“近身格斗”“限时叙事”比“动作”更具体。</div>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <div class="step-title">用更新状态排除断更风险</div>
+            <div class="step-desc">剧集条目页标注“更新至第 X 集”与“X集全”。连载中的条目要看最近一次更新时间，超过 14 天没更新的连载剧，追看价值会下降。《铁幕之下》11 月 4 日更新第 5 集，距今 4 天，节奏正常。</div>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <div class="step-title">读三条短评，找具体细节</div>
+            <div class="step-desc">短评里出现具体集数、具体场景、具体台词引用的，参考价值高于纯情绪表达。比如提到“第 6 集码头对峙一镜到底”的评论，比“很好看”更能帮人判断。</div>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">4</span>
+          <div class="step-content">
+            <div class="step-title">同类条目横向比较看差异点</div>
+            <div class="step-desc">《雾港深流》与《第七封信》都属悬疑，前者靠剧集长度铺线索，后者靠电影时长压缩反转。比较时看“结构差异”而非“评分高低”，前者 8.9 分后者 8.6 分，差距不到 0.4，结构差异才是选择依据。</div>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">5</span>
+          <div class="step-content">
+            <div class="step-title">科幻条目先核对设定规则</div>
+            <div class="step-desc">硬科幻条目页有“设定规则”字段，先读规则再看正片，能减少中途出戏。《轨道之外》的 11 分钟时间戳偏差是整部剧的推理基础，知道这个前提后，第 8 集的监控比对戏才看得明白。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section" id="faq">
+      <div class="section-head">
+        <h2>关于选片与条目判断的常见问题</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>悬疑剧标注“本格推理”和“社会派”，实际观看差别大吗？</summary>
+          <div class="faq-answer">差别在案件推进的动力来源。本格推理靠可穷举的线索推进，观众理论上能比主角先破案；社会派靠人物关系与制度压力推进，线索只是引子。《雾港深流》第 6 集的潮汐时间表属于本格式细节，《第七封信》的法庭戏更接近社会派。选片时如果喜欢自己拼线索，优先本格标签；如果更在意动机和背景，选社会派。</div>
+        </details>
+        <details class="faq-item">
+          <summary>新条目为什么显示“暂无评分”，要等多久？</summary>
+          <div class="faq-answer">样本量满 200 条且上线满 48 小时才出分，两个条件同时满足。《暗巷追击》11 月 2 日 14:00 上线，11 月 4 日 15:00 样本量到 214 才显示 7.9 分。《三个夏天》样本量过 200 用了 5 天，评分 10 月 31 日才出现。等待期可以用标签密度和短评具体程度做替代判断。</div>
+        </details>
+        <details class="faq-item">
+          <summary>硬科幻条目的“设定规则”字段具体写什么？</summary>
+          <div class="faq-answer">写的是片中自洽的技术前提与限制条件。《银翼残响》的规则是单次记忆回溯不超过 90 分钟、第三次回溯产生不可逆叠影；《轨道之外》的规则是空间站日志时间戳比地面任务记录多 11 分钟。这个字段用来核对正片是否违背自己的设定，不是宣传语。</div>
+        </details>
+        <details class="faq-item">
+          <summary>连载剧更新到一半停更，条目页会怎么标？</summary>
+          <div class="faq-answer">超过 14 天没有新集数，状态从“更新至第 X 集”改为“暂停更新”，并显示最后一次更新的具体日期。恢复更新后回到连载状态。2026 年 10 月有 3 部剧集触发过这个标记，其中 2 部在 9 天内恢复。判断是否继续追，看暂停更新前最后两集的评分稳定性，如果最后两集评分连续下滑，复更后质量回升的概率不高。</div>
+        </details>
+        <details class="faq-item">
+          <summary>动画长片的条目页会区分手绘和三维吗？</summary>
+          <div class="faq-answer">会。标签字段里有“手绘动画”“三维渲染”“定格动画”三个选项，可以叠加筛选。《云上邮差》标的是手绘动画，背景水彩分层在条目页的剧照区能直接看出来。三维渲染的动画长片在动作场景里通常有更明显的运动模糊，手绘动画的帧率波动反而是一种风格标记。</div>
+        </details>
+        <details class="faq-item">
+          <summary>同一年份的同类条目，评分差 0.5 分以内怎么选？</summary>
+          <div class="faq-answer">看结构差异而不是分数。《雾港深流》8.9 分、《第七封信》8.6 分，差 0.3 分，但一个是 12 集连载一个是 110 分钟电影，时间投入完全不同。再看标签，前者有“双线叙事”，后者有“书信体”，两种叙事节奏适合不同观看场景。0.5 分以内的差距在加权算法里属于同一档，选片依据应该回到类型和时长。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section class="section" id="comments">
+      <div class="section-head">
+        <h2>用户短评与条目反馈</h2>
+        <a class="sh-more" href="/#submit">写评论 →</a>
+      </div>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">林</span><span class="cm-name">林间有雾</span><span class="cm-stars">★★★★★</span></div>
+          <div class="cm-text">雾港第 6 集那个一镜到底看了三遍，潮汐表贴在码头值班室墙上，镜头扫过去不到两秒，暂停才看清。这种细节值得给五星。</div>
+          <span class="cm-ref">→ 雾港深流 第6集</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">陈</span><span class="cm-name">陈皮不加糖</span><span class="cm-stars">★★★☆☆</span></div>
+          <div class="cm-text">第七封信前 40 分钟节奏太慢，差点弃了。法庭戏救回来，证物链那段确实经得起推敲，但前面能不能剪短点。</div>
+          <span class="cm-ref">→ 第七封信</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">赵</span><span class="cm-name">赵四不姓赵</span><span class="cm-stars">★★★★☆</span></div>
+          <div class="cm-text">银翼残响的时钟细节我暂停核对过，第三次回溯确实快 4 分钟。这种设定不糊弄人，加分。</div>
+          <span class="cm-ref">→ 银翼残响</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">周</span><span class="cm-name">周末不上发条</span><span class="cm-stars">★★★☆☆</span></div>
+          <div class="cm-text">暗巷追击动作戏可以，文戏台词有点硬。线人那个角色每次说话都像在念台词本。</div>
+          <span class="cm-ref">→ 暗巷追击</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">吴</span><span class="cm-name">吴山点点愁</span><span class="cm-stars">★★★★★</span></div>
+          <div class="cm-text">山海之外第 4 集暴雨夜那段，自然光拍出来黑是黑了点，但雨声和发动机声音混在一起，比配乐有力。支教题材能拍成这样不容易。</div>
+          <span class="cm-ref">→ 山海之外 第4集</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">郑</span><span class="cm-name">郑在输入中</span><span class="cm-stars">★★★★☆</span></div>
+          <div class="cm-text">轨道之外第 8 集时间戳多 11 分钟这个点，弹幕吵了一晚上。有人说是编剧漏洞，有人说是伏笔。等第 9 集看怎么圆。</div>
+          <span class="cm-ref">→ 轨道之外 第8集</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">孙</span><span class="cm-name">孙悟饭不吃鱼</span><span class="cm-stars">★★★★★</span></div>
+          <div class="cm-text">云上邮差第二段投递遇到暴雨，水彩雨幕那三层透明叠得太好看了。手风琴配乐一响我就没忍住。</div>
+          <span class="cm-ref">→ 云上邮差</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">王</span><span class="cm-name">王不留行</span><span class="cm-stars">★★★☆☆</span></div>
+          <div class="cm-text">三个夏天的三段式结构有点刻意，2008 那段的便利店冰柜贴纸到 2026 年还在，细节是细，但故事本身淡。</div>
+          <span class="cm-ref">→ 三个夏天</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">李</span><span class="cm-name">李子树下</span><span class="cm-stars">★★★★☆</span></div>
+          <div class="cm-text">铁幕之下查账戏拍得比枪战紧张，Excel 循环引用那个点我笑了半天，但确实合理。第 5 集律师在门外打电话，镜头没跟过去，留了个钩子。</div>
+          <span class="cm-ref">→ 铁幕之下 第5集</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">刘</span><span class="cm-name">刘浪者</span><span class="cm-stars">★★☆☆☆</span></div>
+          <div class="cm-text">最近悬疑剧是不是太多了，打开列表一水儿的暗色调海报。审美疲劳了有点。</div>
+          <span class="cm-ref">→ 类型偏好吐槽</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">何</span><span class="cm-name">何处惹尘埃</span><span class="cm-stars">★★★★☆</span></div>
+          <div class="cm-text">雾港第 5 集失踪者家属信访那段，信访记录上的日期和案件时间线对不上，有人发现了吗？还是我看漏了。</div>
+          <span class="cm-ref">→ 雾港深流 第5集</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">张</span><span class="cm-name">张鱼小丸子</span><span class="cm-stars">★★★★★</span></div>
+          <div class="cm-text">银翼残响的配乐是汉斯·季默团队做的？片尾字幕没看清。低频铺底太有辨识度了。</div>
+          <span class="cm-ref">→ 银翼残响 配乐</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">黄</span><span class="cm-name">黄昏收集者</span><span class="cm-stars">★★★★☆</span></div>
+          <div class="cm-text">第七封信第三幕法庭戏的证物链，评论区有人逐条拆了，我对着看了一遍确实严密。就是前段太闷。</div>
+          <span class="cm-ref">→ 第七封信 法庭戏</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">杨</span><span class="cm-name">杨枝甘露不加冰</span><span class="cm-stars">★★★☆☆</span></div>
+          <div class="cm-text">暗巷追击的动作指导是谁，楼道那场戏的呼吸声比配乐强。但剧情真的就是标准警匪模板。</div>
+          <span class="cm-ref">→ 暗巷追击 动作设计</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">徐</span><span class="cm-name">徐徐图之</span><span class="cm-stars">★★★★★</span></div>
+          <div class="cm-text">山海之外的片尾字幕用真实支教老师录音，这个处理太克制了，没有煽情。三个学生的信我看了两遍。</div>
+          <span class="cm-ref">→ 山海之外 第12集</span>
+        </div>
+        <div class="comment-item">
+          <div class="cm-head"><span class="cm-avatar">马</span><span class="cm-name">马甲线在逃</span><span class="cm-stars">★★★★☆</span></div>
+          <div class="cm-text">轨道之外的空间站实拍微重力模拟，晃动感确实比绿幕真实。但第 7 集有个舱内设备的型号前后不一致，道具穿帮了。</div>
+          <span class="cm-ref">→ 轨道之外 第7集</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section class="section" id="news">
+      <div class="section-head">
+        <h2>条目与行业动态</h2>
+        <a class="sh-more" href="/#updates">更新列表 →</a>
+      </div>
+      <div class="news-list">
+        <div class="news-item">
+          <span class="news-date">11-08</span>
+          <div class="news-body">
+            <h3 class="news-title">《雾港深流》第6集上线，导演确认全剧12集无第二季规划</h3>
+            <p class="news-summary">第 6 集 11 月 8 日上午 9:20 上线，导演在映后访谈中明确 12 集讲完整个故事，不设第二季。片尾彩蛋第二封信邮戳的细节被用户逐帧截出。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="news-date">11-07</span>
+          <div class="news-body">
+            <h3 class="news-title">科幻条目单周新增14部，《星尘旅人》预告90秒片段释出</h3>
+            <p class="news-summary">11 月 1 日至 7 日科幻分类新增 14 部条目，其中 3 部为首次收录。《星尘旅人》释出 90 秒预告，配乐团队沿用《云上邮差》原班人马。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="news-date">11-06</span>
+          <div class="news-body">
+            <h3 class="news-title">《第七封信》样本量过5000，评分从8.5升至8.6</h3>
+            <p class="news-summary">11 月 6 日 16:30 站内样本量突破 5000 条，评分上浮 0.1。第三幕法庭戏的证物链细节在评论区被拆成 37 条逐帧帖，其中 12 条被条目页引用。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="news-date">11-04</span>
+          <div class="news-body">
+            <h3 class="news-title">《铁幕之下》第5集查账戏带动经济犯罪类型条目点击上涨</h3>
+            <p class="news-summary">第 5 集 18:45 上线后 24 小时内，“经济犯罪”标签下条目点击量比前一周同期上涨 28%。查账流叙事在悬疑类型里的讨论量明显增加。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="news-date">11-02</span>
+          <div class="news-body">
+            <h3 class="news-title">《暗巷追击》上线首日样本量214，48小时后出分7.9</h3>
+            <p class="news-summary">11 月 2 日 14:00 上线，11 月 4 日 15:00 样本量达 214 条触发评分显示，初始 7.9 分。后续三天在 7.8 至 8.0 之间波动，动作设计相关短评占比 41%。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="news-date">10-30</span>
+          <div class="news-body">
+            <h3 class="news-title">《山海之外》第12集完结，片尾采用真实支教老师录音</h3>
+            <p class="news-summary">10 月 30 日 20:00 第 12 集上线，片尾字幕部分使用三位真实支教老师的录音。三个学生各自留下一封信的结尾处理，在用户评论中被反复提及。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section class="section" id="recommend">
+      <div class="section-head">
+        <h2>按内容方向索引</h2>
+        <a class="sh-more" href="/#featured">全部条目 →</a>
+      </div>
+      <div class="rec-tags">
+        <a class="rec-tag" href="/#featured">本格推理剧集<span class="rt-count">48</span></a>
+        <a class="rec-tag" href="/#featured">太空封闭空间<span class="rt-count">23</span></a>
+        <a class="rec-tag" href="/#featured">社会派法庭戏<span class="rt-count">31</span></a>
+        <a class="rec-tag" href="/#featured">手绘水彩动画<span class="rt-count">17</span></a>
+        <a class="rec-tag" href="/#featured">记忆伦理科幻<span class="rt-count">19</span></a>
+        <a class="rec-tag" href="/#featured">查账流犯罪剧<span class="rt-count">12</span></a>
+        <a class="rec-tag" href="/#featured">三段式时间叙事<span class="rt-count">14</span></a>
+        <a class="rec-tag" href="/#featured">乡村公路题材<span class="rt-count">26</span></a>
+      </div>
+    </section>
+
+    <!-- 11. 补充板块：热门榜单 + 条目时间线 -->
+    <section class="section" id="ranking">
+      <div class="section-head">
+        <h2>本周热门条目榜与更新时间线</h2>
+      </div>
+      <table class="rank-table">
+        <thead>
+          <tr><th style="width:36px">#</th><th>条目</th><th>类型</th><th style="text-align:right">评分</th><th style="text-align:right">趋势</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="rk-num top">1</td><td class="rk-title">雾港深流</td><td class="rk-type">悬疑剧集</td><td class="rk-score">8.9</td><td class="rk-trend up">↑ 0.1</td></tr>
+          <tr><td class="rk-num top">2</td><td class="rk-title">云上邮差</td><td class="rk-type">动画长片</td><td class="rk-score">8.8</td><td class="rk-trend up">↑ 0.2</td></tr>
+          <tr><td class="rk-num top">3</td><td class="rk-title">山海之外</td><td class="rk-type">现实剧情</td><td class="rk-score">8.7</td><td class="rk-trend down">↓ 0.1</td></tr>
+          <tr><td class="rk-num">4</td><td class="rk-title">第七封信</td><td class="rk-type">悬疑电影</td><td class="rk-score">8.6</td><td class="rk-trend up">↑ 0.1</td></tr>
+          <tr><td class="rk-num">5</td><td class="rk-title">银翼残响</td><td class="rk-type">科幻电影</td><td class="rk-score">8.4</td><td class="rk-trend down">↓ 0.2</td></tr>
+          <tr><td class="rk-num">6</td><td class="rk-title">三个夏天</td><td class="rk-type">文艺剧情</td><td class="rk-score">8.3</td><td class="rk-trend up">↑ 0.1</td></tr>
+          <tr><td class="rk-num">7</td><td class="rk-title">轨道之外</td><td class="rk-type">科幻剧集</td><td class="rk-score">8.2</td><td class="rk-trend up">↑ 0.3</td></tr>
+          <tr><td class="rk-num">8</td><td class="rk-title">铁幕之下</td><td class="rk-type">犯罪剧集</td><td class="rk-score">8.1</td><td class="rk-trend up">↑ 0.2</td></tr>
+          <tr><td class="rk-num">9</td><td class="rk-title">暗巷追击</td><td class="rk-type">动作犯罪</td><td class="rk-score">7.9</td><td class="rk-trend down">↓ 0.1</td></tr>
+          <tr><td class="rk-num">10</td><td class="rk-title">星尘旅人</td><td class="rk-type">动画长片</td><td class="rk-score">—</td><td class="rk-trend">新条目</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 12. 投稿互动 -->
+    <section class="section" id="submit">
+      <div class="section-head">
+        <h2>投稿与条目补充</h2>
+      </div>
+      <div class="submit-panel">
+        <div class="submit-card">
+          <h3>投稿新片单</h3>
+          <p>整理 5 部以上同主题条目，附 200 字以内的选片逻辑，审核通过后上首页片单区。2026 年 11 月已收到 6 份投稿，其中 2 份在 11 月 7 日上线。</p>
+          <button class="sc-btn" type="button">提交片单 →</button>
+        </div>
+        <div class="submit-card">
+          <h3>补充条目信息</h3>
+          <p>发现条目年份、集数、导演信息有误，或想补充设定规则字段，可提交修正。最近 30 天收到 43 条修正，其中 31 条已核实并更新。</p>
+          <button class="sc-btn" type="button">提交修正 →</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右辅助栏 -->
+  <aside class="aside-col">
+    <div class="aside-card">
+      <h3>今日热度榜</h3>
+      <div class="hot-list">
+        <div class="hot-item"><span class="hot-num top1">1</span><div class="hot-info"><div class="hot-title">雾港深流 第6集</div><div class="hot-meta">悬疑剧集 · 9.4万热度</div></div></div>
+        <div class="hot-item"><span class="hot-num top2">2</span><div class="hot-info"><div class="hot-title">第七封信 法庭戏</div><div class="hot-meta">悬疑电影 · 8.1万热度</div></div></div>
+        <div class="hot-item"><span class="hot-num top3">3</span><div class="hot-info"><div class="hot-title">银翼残响 时钟细节</div><div class="hot-meta">科幻电影 · 7.8万热度</div></div></div>
+        <div class="hot-item"><span class="hot-num">4</span><div class="hot-info"><div class="hot-title">云上邮差 雨幕段落</div><div class="hot-meta">动画长片 · 7.2万热度</div></div></div>
+        <div class="hot-item"><span class="hot-num">5</span><div class="hot-info"><div class="hot-title">轨道之外 时间戳偏差</div><div class="hot-meta">科幻剧集 · 6.8万热度</div></div></div>
+        <div class="hot-item"><span class="hot-num">6</span><div class="hot-info"><div class="hot-title">山海之外 完结集</div><div class="hot-meta">现实剧情 · 6.5万热度</div></div></div>
+      </div>
+    </div>
+    <div class="aside-card">
+      <h3>条目更新时间线</h3>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-date">11-08</div><div class="tl-text">雾港深流 第6集上线</div></div>
+        <div class="tl-item"><div class="tl-date">11-07</div><div class="tl-text">星尘旅人 条目收录</div></div>
+        <div class="tl-item"><div class="tl-date">11-06</div><div class="tl-text">轨道之外 第8集更新</div></div>
+        <div class="tl-item"><div class="tl-date">11-04</div><div class="tl-text">铁幕之下 第5集更新</div></div>
+        <div class="tl-item"><div class="tl-date">11-02</div><div class="tl-text">暗巷追击 上线</div></div>
+        <div class="tl-item"><div class="tl-date">10-30</div><div class="tl-text">山海之外 第12集完结</div></div>
+      </div>
+    </div>
+    <div class="aside-card">
+      <h3>快速筛选</h3>
+      <div class="rec-tags" style="gap:7px">
+        <a class="rec-tag" href="/#featured" style="font-size:12px;padding:4px 11px">悬疑</a>
+        <a class="rec-tag" href="/#featured" style="font-size:12px;padding:4px 11px">科幻</a>
+        <a class="rec-tag" href="/#featured" style="font-size:12px;padding:4px 11px">剧情</a>
+        <a class="rec-tag" href="/#featured" style="font-size:12px;padding:4px 11px">动作</a>
+        <a class="rec-tag" href="/#featured" style="font-size:12px;padding:4px 11px">动画</a>
+        <a class="rec-tag" href="/#featured" style="font-size:12px;padding:4px 11px">2026</a>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ===== 页尾 ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <rect width="100" height="100" rx="22" fill="#23233d"/>
+            <path d="M24 32h44a10 10 0 0 1 10 10v26a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10V42a10 10 0 0 1 10-10z" fill="none" stroke="#e94560" stroke-width="6"/>
+            <path d="M42 44l22 10-22 10z" fill="#e94560"/>
+          </svg>
+          <span>www.hlbdy13.com</span>
+        </div>
+        <p class="footer-desc">覆盖 2024 至 2026 年院线与流媒体条目，以剧集连载与电影长片为主，每周三更新片单，每日同步连载剧集更新状态。条目信息含设定规则、集数状态与用户短评。</p>
+      </div>
+      <div class="footer-col">
+        <h4>频道</h4>
+        <ul>
+          <li><a href="/#overview">影视概览</a></li>
+          <li><a href="/#featured">精选片单</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#categories">分类入口</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>内容</h4>
+        <ul>
+          <li><a href="/#deep-dive">深度解析</a></li>
+          <li><a href="/#guide">观影指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>互动</h4>
+        <ul>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#ranking">热门榜单</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+          <li><a href="/#submit">投稿互动</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>条目数据为示例内容，评分与热度为站内加权示例值。最近更新：2026-11-08《雾港深流》第6集上线。</p>
+      <span class="fb-right">© 2026 www.hlbdy13.com · 内容聚合示例页</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="back-top" id="backTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ===== 移动端菜单 ===== */
+  var menuToggle = document.getElementById('menuToggle');
+  var mainNav = document.getElementById('mainNav');
+  var overlay = document.getElementById('overlay');
+
+  function closeMenu(){
+    mainNav.classList.remove('open');
+    overlay.classList.remove('show');
+    menuToggle.setAttribute('aria-expanded','false');
+    menuToggle.setAttribute('aria-label','打开导航菜单');
+  }
+  function openMenu(){
+    mainNav.classList.add('open');
+    overlay.classList.add('show');
+    menuToggle.setAttribute('aria-expanded','true');
+    menuToggle.setAttribute('aria-label','关闭导航菜单');
+  }
+  menuToggle.addEventListener('click', function(){
+    if(mainNav.classList.contains('open')){ closeMenu(); } else { openMenu(); }
+  });
+  overlay.addEventListener('click', closeMenu);
+  mainNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(window.innerWidth <= 740){ closeMenu(); }
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeMenu(); }
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 740){ closeMenu(); }
+  });
+
+  /* ===== 搜索筛选 ===== */
+  var searchInput = document.getElementById('siteSearch');
+  var searchBtn = document.getElementById('searchBtn');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#featuredGrid .content-card'));
+  var noResult = document.getElementById('noResult');
+
+  function doSearch(){
+    var q = searchInput.value.trim().toLowerCase();
+    if(!q){
+      cards.forEach(function(c){ c.style.display = ''; });
+      noResult.classList.remove('show');
+      return;
+    }
+    var visible = 0;
+    cards.forEach(function(card){
+      var text = (card.textContent + ' ' + (card.getAttribute('data-tags') || '')).toLowerCase();
+      var hit = text.indexOf(q) !== -1;
+      card.style.display = hit ? '' : 'none';
+      if(hit) visible++;
+    });
+    noResult.classList.toggle('show', visible === 0);
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+  searchInput.addEventListener('input', function(){
+    if(searchInput.value.trim() === ''){ doSearch(); }
+  });
+
+  /* ===== 回到顶部 ===== */
+  var backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', function(){
+    backTop.classList.toggle('show', window.scrollY > window.innerHeight);
+  }, {passive:true});
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ===== 侧栏频道高亮 ===== */
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id], section.hero[id]'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.channel-nav a'));
+  var headerOffset = 56 + 40 + 20;
+
+  function highlightNav(){
+    var pos = window.scrollY + headerOffset;
+    var currentId = '';
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos){ currentId = sec.id; }
+    });
+    navLinks.forEach(function(link){
+      var href = link.getAttribute('href');
+      var targetId = href ? href.split('#')[1] : '';
+      if(targetId === currentId){
+        link.style.background = 'rgba(233,69,96,.06)';
+        link.style.color = '#e94560';
+        link.style.borderLeftColor = '#e94560';
+      } else {
+        link.style.background = '';
+        link.style.color = '';
+        link.style.borderLeftColor = '';
+      }
+    });
+  }
+  window.addEventListener('scroll', highlightNav, {passive:true});
+  highlightNav();
+
+})();
+</script>
+
+<!-- 结构化数据：WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "www.hlbdy13.com",
+  "description": "高清影视资源聚合与条目速览，涵盖悬疑、科幻、剧情、动作、动画等类型，提供片单、更新动态、深度解析与用户评论。",
+  "inLanguage": "zh-CN",
+  "dateModified": "2026-11-08"
+}
+</script>
+
+<!-- 结构化数据：FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "悬疑剧标注“本格推理”和“社会派”，实际观看差别大吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "差别在案件推进的动力来源。本格推理靠可穷举的线索推进，观众理论上能比主角先破案；社会派靠人物关系与制度压力推进，线索只是引子。《雾港深流》第6集的潮汐时间表属于本格式细节，《第七封信》的法庭戏更接近社会派。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "新条目为什么显示“暂无评分”，要等多久？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "样本量满200条且上线满48小时才出分。《暗巷追击》11月2日14:00上线，11月4日15:00样本量到214才显示7.9分。《三个夏天》样本量过200用了5天，评分10月31日才出现。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "硬科幻条目的“设定规则”字段具体写什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "写的是片中自洽的技术前提与限制条件。《银翼残响》的规则是单次记忆回溯不超过90分钟、第三次回溯产生不可逆叠影；《轨道之外》的规则是空间站日志时间戳比地面任务记录多11分钟。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "连载剧更新到一半停更，条目页会怎么标？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "超过14天没有新集数，状态从“更新至第X集”改为“暂停更新”，并显示最后一次更新的具体日期。恢复更新后回到连载状态。判断是否继续追，看暂停更新前最后两集的评分稳定性。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "动画长片的条目页会区分手绘和三维吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "会。标签字段里有“手绘动画”“三维渲染”“定格动画”三个选项，可以叠加筛选。《云上邮差》标的是手绘动画，背景水彩分层在条目页的剧照区能直接看出来。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "同一年份的同类条目，评分差0.5分以内怎么选？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看结构差异而不是分数。《雾港深流》8.9分、《第七封信》8.6分，差0.3分，但一个是12集连载一个是110分钟电影，时间投入完全不同。0.5分以内的差距在加权算法里属于同一档，选片依据应该回到类型和时长。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+            </html>
